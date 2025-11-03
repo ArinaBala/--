@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>First task</title>
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+
+.sidebar {
+  width: 200px;
+  background-color: #222;
+  color: white;
+  text-align: center;
+  padding-top: 20px;
+}
+
+.logo img {
+  width: 60px;
+  height: 60px;
+  margin: 20px auto;
+  border-radius: 5px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  padding: 12px 0;
+  cursor: pointer;
+  border-bottom: 1px solid #444; 
+  transition: 0.3s;
+}
+
+
+.sidebar ul li:hover {
+  background-color: #333;
+  color: #78aae4; 
+}
+
+
+.main {
+  flex: 1;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+.header {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+
+.dashboard {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.grafik {
+  background-color: white;
+  flex: 1 1 45%;
+  padding: 10px;
+}
+
+.grafik-box {
+  display: flex;
+  justify-content: center; /* по горизонтали */
+  align-items: center;     /* по вертикали */
+  height: 150px;
+  
+  border-radius: 5px;
+}
+
+.grafik-box img {
+  width: auto;
+  height: 100%;
+  border-radius: 5px;
+  object-fit: contain; /* чтобы картинка не искажалась */
+}
+
+
+.activity {
+  background-color: white;
+  width: 100%;
+  margin-top: 20px;
+  padding: 10px;
+}
+
+.activity h3 {
+  margin-top: 0;
+}
+
+.activity-header, .activity-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 0;
+}
+
+.activity-header {
+  font-weight: bold;
+  border-bottom: 1px solid #ccc;
+}
+
+.activity-item {
+  border-bottom: 1px solid #eee;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+  <div class="sidebar">
+    <div class="logo">
+        <img src="logo.png" alt="">
+    </div>
+    <ul>
+      <li>Dashboard</li>
+      <li>Users</li>
+      <li>File Manager</li>
+      <li>Posts</li>
+      <li>Events</li>
+    </ul>
+  </div>
+
+  <div class="main">
+    <div class="header">Dashboard - May 25, 2019</div>
+
+    <div class="dashboard">
+      <div class="grafik">
+        <h3>Traffic</h3>
+        <div class="grafik-box">
+            <img src="chart1.png" alt="">
+        </div>
+      </div>
+      <div class="grafik">
+        <h3>Loads</h3>
+        <div class="grafik-box">
+            <img src="chart2.png" alt="">
+        </div>
+      </div>
+    </div>
+
+    <div class="activity">
+      <h3>Recent Activity</h3>
+      <div class="activity-header">
+        <div>#</div>
+        <div>Title</div>
+        <div>Author</div>
+        <div>Date</div>
+      </div>
+
+      <div class="activity-item">
+        <div>1</div>
+        <div>Etiam eu erat sit amet nisi eleifend aliquam</div>
+        <div>Phoebe Britton</div>
+        <div>25/05/19</div>
+      </div>
+      <div class="activity-item">
+        <div>2</div>
+        <div>Ut maximus lacus ut ante tristique</div>
+        <div>Rosina Clay</div>
+        <div>25/05/19</div>
+      </div>
+      <div class="activity-item">
+        <div>3</div>
+        <div>Donec eget ligula sed diam pharetra</div>
+        <div>Ayush Horn</div>
+        <div>24/05/19</div>
+      </div>
+      <div class="activity-item">
+        <div>4</div>
+        <div>Curabitur bibendum odio in velit pretium luctus</div>
+        <div>Jillian Carver</div>
+        <div>23/05/19</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
